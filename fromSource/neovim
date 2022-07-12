@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+command='nvim'
+url='https://github.com/neovim/neovim/archive/refs/tags/v0.7.2.tar.gz'
+checksum='ccab8ca02a0c292de9ea14b39f84f90b635a69282de38a6b4ccc8565bc65d096'
+srcDir='neovim-0.7.2'
+dependencies=(
+    ninja-build
+    gettext
+    libtool
+    libtool-bin
+    autoconf
+    automake
+    cmake
+    g++
+    pkg-config
+    unzip
+    curl
+    doxygen
+)
+
+install () {
+    make CMAKE_BUILD_TYPE=Release
+    make install
+}
+
+uninstall () {
+    rm /usr/local/bin/nvim
+    rm -r /usr/local/share/nvim/
+}
+
+cleanup () { :; }
