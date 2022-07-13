@@ -16,11 +16,9 @@ apt_packages=(
   anki
   zathura
   # Utils
-  gnome-software-plugin-flatpak
   git
   curl
   stow
-  python3-pip
   texlive-full
 )
 
