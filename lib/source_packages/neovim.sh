@@ -3,7 +3,7 @@ command='nvim'
 url='https://github.com/neovim/neovim/archive/refs/tags/v0.7.2.tar.gz'
 checksum='ccab8ca02a0c292de9ea14b39f84f90b635a69282de38a6b4ccc8565bc65d096'
 srcDir='neovim-0.7.2'
-dependencies=(
+apt_packages=(
     ninja-build
     gettext
     libtool
@@ -17,15 +17,16 @@ dependencies=(
     curl
     doxygen
 )
+rust_packages[stylua]=0.14.0
 
 install () {
+    pip install pynvim
     make CMAKE_BUILD_TYPE=Release
-    make install
+    sudo make install
 }
 
 uninstall () {
-    rm /usr/local/bin/nvim
-    rm -r /usr/local/share/nvim/
+    sudo rm /usr/local/bin/nvim
+    sudo rm -r /usr/local/share/nvim/
 }
 
-cleanup () { :; }
