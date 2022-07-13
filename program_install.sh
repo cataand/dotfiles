@@ -11,8 +11,10 @@ apt_packages=(
   # Desktop
   gnome-core
   gnome-tweaks
+  papirus-icon-theme
   ibus-anthy
   # Apps
+  tmux
   anki
   zathura
   # Utils
@@ -37,7 +39,6 @@ flatpak_packages=(
 )
 
 source_packages=(
-  tmux
   alacritty
   neovim
 )
