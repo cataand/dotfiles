@@ -3,6 +3,7 @@ SRC_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 source $SRC_DIR/lib/apt.sh
 source $SRC_DIR/lib/rust.sh
 source $SRC_DIR/lib/node.sh
+source $SRC_DIR/lib/pip.sh
 source $SRC_DIR/lib/source.sh
 
 apt_packages=(
@@ -29,6 +30,9 @@ declare -A rust_packages
 declare -A node_packages
 #node_packages[renovate]=20.5.1
 
+declare -A pip_packages
+#pip_packages[pynvim]=0.4.3
+
 source_packages=(
   tmux
   alacritty
@@ -38,4 +42,5 @@ source_packages=(
 install_apt_packages
 install_rust_packages
 install_node_packages
+install_pip_packages
 install_source_packages

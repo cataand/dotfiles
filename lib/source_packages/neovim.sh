@@ -18,6 +18,7 @@ apt_packages=(
     doxygen
 )
 rust_packages[stylua]=0.14.0
+pip_packages[pynvim]=0.4.3
 
 install () {
     make CMAKE_BUILD_TYPE=Release

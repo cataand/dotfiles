@@ -12,7 +12,8 @@ install_rust_packages ()
   install_rust
 
   for package in "${!rust_packages[@]}"; do
-    cargo install --version ${rust_packages[$package]} $package
+    version=${rust_packages[$package]}
+    cargo install --version $version $package
   done
   declare -gA rust_packages
 }

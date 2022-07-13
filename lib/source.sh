@@ -13,6 +13,7 @@ install_source_packages ()
     install_apt_packages
     install_rust_packages
     install_node_packages
+    install_pip_packages
         
     # Skip if already installed
     if command -v $command &> /dev/null; then
