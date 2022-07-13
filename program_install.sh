@@ -4,6 +4,7 @@ source $SRC_DIR/lib/apt.sh
 source $SRC_DIR/lib/rust.sh
 source $SRC_DIR/lib/node.sh
 source $SRC_DIR/lib/pip.sh
+source $SRC_DIR/lib/flatpak.sh
 source $SRC_DIR/lib/source.sh
 
 apt_packages=(
@@ -15,7 +16,6 @@ apt_packages=(
   anki
   zathura
   # Utils
-  flatpak
   gnome-software-plugin-flatpak
   git
   curl
@@ -33,6 +33,11 @@ declare -A node_packages
 declare -A pip_packages
 #pip_packages[pynvim]=0.4.3
 
+flatpak_packages=(
+  tv.plex.PlexDesktop
+  com.discordapp.Discord
+)
+
 source_packages=(
   tmux
   alacritty
@@ -43,4 +48,5 @@ install_apt_packages
 install_rust_packages
 install_node_packages
 install_pip_packages
+install_flatpak_packages
 install_source_packages
