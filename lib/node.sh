@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 install_node ()
 {
-  if ! command -v 'node' &> /dev/null; then
+  if ! command -v 'npm' &> /dev/null; then
     curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
-    apt-get install -y nodejs
+    sudo apt-get install -y npm
   fi
 }
 

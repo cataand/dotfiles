@@ -20,7 +20,6 @@ apt_packages=(
 rust_packages[stylua]=0.14.0
 
 install () {
-    pip install pynvim
     make CMAKE_BUILD_TYPE=Release
     sudo make install
 }

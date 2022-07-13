@@ -9,7 +9,6 @@ apt_packages=(
   # Desktop
   gnome-core
   gnome-tweaks
-  gnome-shell-extension-appindicator
   ibus-anthy
   # Apps
   anki
