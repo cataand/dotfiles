@@ -15,5 +15,5 @@ install_flatpak_packages ()
   for package in "${flatpak_packages[@]}"; do
     flatpak install $package -y
   done
-  declare -gA flatpak_packages
+  flatpak_packages=()
 }
