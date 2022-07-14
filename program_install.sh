@@ -15,6 +15,7 @@ apt_packages=(
   ibus-anthy
   # Apps
   tmux
+  kitty
   anki
   zathura
   # Utils
@@ -39,7 +40,6 @@ flatpak_packages=(
 )
 
 source_packages=(
-  alacritty
   neovim
 )
 
