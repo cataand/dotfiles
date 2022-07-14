@@ -14,7 +14,6 @@ apt_packages=(
   papirus-icon-theme
   ibus-anthy
   # Apps
-  tmux
   kitty
   anki
   zathura
