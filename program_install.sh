@@ -11,6 +11,7 @@ apt_packages=(
   # Desktop
   gnome-core
   gnome-tweaks
+  gnome-screenshot
   papirus-icon-theme
   ibus-anthy
   # Apps
