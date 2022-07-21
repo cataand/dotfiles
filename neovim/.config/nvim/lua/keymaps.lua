@@ -1,5 +1,12 @@
 local options = { noremap = true, silent = true }
-local keymap = vim.keymap.set
+local keymap = vim.api.nvim_set_keymap
+
+-- Normal --
+-- Better window navigation
+keymap("n", "<C-h>", "<C-w>h", options)
+keymap("n", "<C-j>", "<C-w>j", options)
+keymap("n", "<C-k>", "<C-w>k", options)
+keymap("n", "<C-l>", "<C-w>l", options)
 
 -- Visual Mode --
 -- Stay in indent mode
