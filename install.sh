@@ -1,3 +1,4 @@
+sudo dnf install stow -y
 # Stow dotfiles
 dir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 target="${HOME}"
