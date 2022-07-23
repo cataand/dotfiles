@@ -8,7 +8,7 @@ M.config = function()
 		open_mapping = [[<c-\>]],
 		hide_numbers = true,
 		direction = "horizontal",
-		shell = "/usr/bin/fish",
+		shell = "/bin/zsh",
 	})
 
 	function _G.set_terminal_keymaps()

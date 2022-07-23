@@ -5,16 +5,24 @@ target="${HOME}"
 packages=($(find "${dir}" -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | grep "^[^\.]"))
 stow --restow --dir="${dir}" --target="${target}" ${packages[@]}
 
+# Install autogen
+mkdir -p $HOME/.local/share/zsh/
+curl -L git.io/antigen > $HOME/.local/share/zsh/antigen.zsh
+
 # Install packages
 dnf_packages=(
-  fish
+  zsh
   alacritty
+  tmux
   neovim
   gcc-c++
   python3-pip
   cargo
   npm
   ripgrep
+  zathura
+  zathura-pdf-mupdf
+  direnv
 )
 sudo dnf install ${dnf_packages[*]} -y
 

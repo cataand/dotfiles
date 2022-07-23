@@ -11,6 +11,7 @@ M.config = function()
 		sync_install = false,
 		highlight = {
 			enable = true,
+      disable = {"latex"}
 		},
 		indent = {
 			enable = true,

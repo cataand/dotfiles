@@ -48,6 +48,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.nvim-tree"))
 	use(require("plugins.toggleterm"))
 	use(require("plugins.lualine"))
+  use(require("plugins.vimtex"))
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

@@ -13,6 +13,10 @@ M.requires = {
 		"hrsh7th/cmp-path",
 		commit = "981baf9525257ac3269e1b6701e376d6fbff6921",
 	},
+	{
+		"hrsh7th/cmp-omni",
+		commit = "7a457f0c4f9e0801fee777d955eb841659aa3b84",
+	},
 
 	{
 		"SirVer/ultisnips",
@@ -28,6 +32,7 @@ M.requires = {
 	},
 }
 M.config = function()
+	vim.g.tex_flavor = "latex"
 	local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
 	local cmp = require("cmp")
 
@@ -68,6 +73,7 @@ M.config = function()
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },
 			{ name = "ultisnips" },
+			{ name = "omni" },
 			{ name = "buffer" },
 			{ name = "path" },
 		}),

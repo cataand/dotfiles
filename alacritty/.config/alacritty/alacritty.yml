@@ -565,9 +565,12 @@ colors: *gruvbox_material_medium_dark
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-  program: /usr/bin/fish
-#  args:
-#    - --login
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+
 
 # Startup directory
 #
